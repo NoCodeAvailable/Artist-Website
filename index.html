@@ -1,1 +1,124 @@
-yo speed
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DNC777</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="site">
+  <nav>
+    <div class="nav-logo">DNC777</div>
+    <div class="nav-links">
+      <button class="active" onclick="show('home', this)">Home</button>
+      <button onclick="show('solo', this)">Solo Artist</button>
+      <button onclick="show('group', this)">Group</button>
+    </div>
+  </nav>
+
+  <!-- HOME -->
+  <div id="home" class="page active">
+    <div class="hero">
+      <div class="hero-eyebrow">Official Artist Website</div>
+      <div class="hero-name">DNC<br>777</div>
+      <div class="hero-divider"></div>
+      <p class="hero-desc">Hip-hop artist. Composer. Storyteller. Explore my solo work and group music below.</p>
+      <div class="hero-cta">
+        <button class="btn-primary" onclick="show('solo', document.querySelectorAll('.nav-links button')[1])">Solo Work</button>
+        <button class="btn-ghost" onclick="show('group', document.querySelectorAll('.nav-links button')[2])">Group</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Explore</div>
+      <div class="feat-grid">
+        <div class="feat-cell" onclick="show('solo', document.querySelectorAll('.nav-links button')[1])">
+          <div class="fc-label">Solo Artist</div>
+          <div class="fc-title">Artist Bio</div>
+          <div class="fc-sub">My story, my sound, and my solo compositions.</div>
+          <span class="fc-arrow">→</span>
+        </div>
+        <div class="feat-cell" onclick="show('group', document.querySelectorAll('.nav-links button')[2])">
+          <div class="fc-label">Group</div>
+          <div class="fc-title">Group Page</div>
+          <div class="fc-sub">Meet the group, hear the music, watch the video.</div>
+          <span class="fc-arrow">→</span>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-logo">DNC777</div>
+      <div class="footer-note">Music 10 &bull; 2026</div>
+    </footer>
+  </div>
+
+  <!-- SOLO -->
+  <div id="solo" class="page">
+    <div class="solo-header">
+      <div class="eyebrow">Solo Artist</div>
+      <h1>DNC777</h1>
+      <div class="tagline">Hip-Hop &bull; Composer &bull; Lyricist</div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Artist Biography</div>
+      <div class="bio-text">
+        <p>DNC777 is a hip-hop artist whose music is built on honest storytelling and sharp lyricism. Growing up surrounded by music, they developed an ear for rhythm and a passion for putting real experiences into words — turning everyday moments into tracks that hit differently.</p>
+        <p>Influenced by artists who blend raw emotion with crafted production, DNC777 approaches every song as a chance to say something that matters. Whether writing over hard-hitting beats or melodic instrumentals, their style is direct, personal, and always authentic.</p>
+        <p>Currently studying music and sharpening their craft, DNC777 is building a sound entirely their own — one track at a time.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Solo Compositions</div>
+      <div class="track-row">
+        <div class="track-info">
+          <div class="track-name">tuff song</div>
+          <div class="track-meta">Solo composition &bull; Music 10</div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-logo">DNC777</div>
+      <div class="footer-note">Music 10 &bull; 2026</div>
+    </footer>
+  </div>
+
+  <!-- GROUP -->
+  <div id="group" class="page">
+    <div class="group-banner">
+      <div class="eyebrow">Group Page</div>
+      <h1>[GROUP NAME]</h1>
+      <div class="sub">Hip-Hop Collective &bull; Music 10</div>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Group Biography</div>
+      <p class="group-bio">[Group Name] is a hip-hop collective formed in Music 10. Brought together by a shared love of rhythm, beats, and lyricism, the group blends each member's individual voice into something bigger than the sum of its parts. Their music explores themes of identity, ambition, and real life — crafted collaboratively from the ground up and performed with energy and intention.</p>
+    </div>
+
+    <div class="section">
+      <div class="section-label">Music Video</div>
+      <div class="mv-frame">
+        <div class="mv-play">▶</div>
+        <div class="mv-label">Music video coming soon</div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-logo">DNC777</div>
+      <div class="footer-note">Music 10 &bull; 2026</div>
+    </footer>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
