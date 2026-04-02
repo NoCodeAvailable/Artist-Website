@@ -40,7 +40,7 @@
           <div class="fc-label">Solo Artist</div>
           <div class="fc-title">Artist Bio</div>
           <div class="fc-sub">My story, my sound, and my solo compositions.</div>
-         <span class="fc-arrow">→</span>
+          <span class="fc-arrow">→</span>
         </div>
         <div class="feat-cell" onclick="show('group', document.querySelectorAll('.nav-links button')[2])">
           <div class="fc-label">Group</div>
@@ -76,10 +76,19 @@
 
     <div class="section">
       <div class="section-label">Solo Compositions</div>
-      <div class="track-row">
-        <div class="track-info">
-          <div class="track-name">tuff song</div>
-          <div class="track-meta">Solo composition &bull; Music 10</div>
+      <div class="player">
+        <audio id="solo-track" src="/songs/dnc777-solo.mp3"></audio>
+        <div class="player-top">
+          <div class="player-info">
+            <div class="player-title">tuff song</div>
+            <div class="player-meta">Solo composition &bull; Music 10</div>
+          </div>
+          <button class="player-btn" id="play-btn" onclick="togglePlay()">&#9654;</button>
+        </div>
+        <div class="player-bar">
+          <span class="player-time" id="current-time">0:00</span>
+          <input type="range" id="seek-bar" value="0" min="0" step="0.1" class="seek" oninput="seekTo(this.value)" />
+          <span class="player-time" id="duration">0:00</span>
         </div>
       </div>
     </div>
@@ -112,13 +121,15 @@
     </div>
 
     <footer>
-      <div class="footer-logo">DNC777</div>
       <div class="footer-note">Music 10 &bull; 2026</div>
     </footer>
   </div>
 
 </div>
 
+
 <script src="script.js"></script>
+
 </body>
+
 </html>
